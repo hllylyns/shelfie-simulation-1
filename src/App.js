@@ -12,9 +12,12 @@ class App extends Component {
     super();
 
     this.state = {
-        imageURL: '',
-        productName: '',
-        price: ''
+          inventoryList: [
+            {name:"mona list",price:500000,image:"imageurl"},
+            {name:"mona list",price:500000,image:"imageurl"},
+            {name:"mona list",price:500000,image:"imageurl"}
+          ]
+      
     }
 }
 
@@ -24,7 +27,7 @@ class App extends Component {
       <div className="App">
         <div>
           <Header/>
-          <Dashboard/>
+          <Dashboard list={this.state.inventoryList}/>
           <Form />
         </div>
       </div>

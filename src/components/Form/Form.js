@@ -24,7 +24,6 @@ class Form extends Component {
     }
 
     handleCancel() {
-        
         this.setState({imageURL:'', productName:'', price:'' });
     }
     handleAdd() {
