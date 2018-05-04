@@ -8,13 +8,24 @@ import Header from './components/Header/Header';
 
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+        imageURL: '',
+        productName: '',
+        price: ''
+    }
+}
+
+
   render() {
     return (
       <div className="App">
         <div>
           <Header/>
           <Dashboard/>
-          <Form/>
+          <Form />
         </div>
       </div>
     );
