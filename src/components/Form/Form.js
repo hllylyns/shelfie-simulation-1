@@ -12,6 +12,7 @@ class Form extends Component {
         }
 
         this.handleCancel = this.handleCancel.bind(this);
+        this.handleAdd = this.handleAdd.bind(this);
     }
 
     handleImageUrlChange(value) {
@@ -29,7 +30,7 @@ class Form extends Component {
     }
     handleAdd() {
      axios.post('/api/product').then(res=>{
-        this.setState({})
+        this.setState({name: res.data.name, img_url: res.data.img_url, price: res.data.price});
      });
     }
 

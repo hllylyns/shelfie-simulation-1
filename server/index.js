@@ -4,6 +4,7 @@ const controller = require('./controller');
 const massive = require('massive');
 const cors = require('cors');
 require('dotenv').config();
+const axios = require('axios');
 
 const app = express();
 
@@ -14,9 +15,9 @@ massive(process.env.CONNECTION_STRING).then(dbInstance => app.set('db', dbInstan
 const BaseUrl = "/api/inventory";
 app.get( BaseUrl, controller.read );
 app.post( '/api/product', controller.create );
-
+app.delete( `${BaseUrl}/:id`, controller.delete );
 // app.put( `${BaseUrl}/:id`, controller.update );
-// app.delete( BaseUrl, controller.delete );
+
 
 
 const port = 3005;

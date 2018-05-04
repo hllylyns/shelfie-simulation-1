@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+.redheader{
+  color: white;
+  background-color: red;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
