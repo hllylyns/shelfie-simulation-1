@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Form extends Component {
     constructor() {
         super();
 
         this.state = {
-            imageURL: '',
-            productName: '',
+            name: '',
+            img_url: 0,
             price: ''
         }
 
@@ -27,7 +28,9 @@ class Form extends Component {
         this.setState({imageURL:'', productName:'', price:'' });
     }
     handleAdd() {
-
+     axios.post('/api/product').then(res=>{
+        this.setState({})
+     });
     }
 
     render() {
